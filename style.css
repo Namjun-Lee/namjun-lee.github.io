@@ -47,14 +47,14 @@ body {
 button {
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #ff69b4;
+    background-color: #636263;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #ff1493;
+    background-color: #302e2f;
 }
 
 #spotify-player {
