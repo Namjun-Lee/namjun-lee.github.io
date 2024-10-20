@@ -96,32 +96,5 @@ function checkWin() {
         });
     }
 }
-pieces.forEach(piece => {
-    // Mobile touch support
-    piece.addEventListener('touchstart', (e) => {
-        draggedPiece = e.target;
-        e.target.style.opacity = '0.5';  // Make dragged piece semi-transparent
-        const touch = e.touches[0];
-        draggedPiece.initialX = touch.clientX - draggedPiece.offsetLeft;
-        draggedPiece.initialY = touch.clientY - draggedPiece.offsetTop;
-    });
-
-    piece.addEventListener('touchmove', (e) => {
-        const touch = e.touches[0];
-        draggedPiece.style.position = 'absolute';
-        draggedPiece.style.left = `${touch.clientX - draggedPiece.initialX}px`;
-        draggedPiece.style.top = `${touch.clientY - draggedPiece.initialY}px`;
-    });
-
-    piece.addEventListener('touchend', (e) => {
-        draggedPiece.style.opacity = '1';
-        draggedPiece = null;  // Reset dragged piece
-    });
-
-    piece.addEventListener('touchcancel', (e) => {
-        draggedPiece.style.opacity = '1';
-        draggedPiece = null;  // Reset if touch is canceled
-    });
-});
 
 createPuzzle();
