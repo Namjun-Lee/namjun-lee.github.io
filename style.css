@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('background.jpg'); /* Path to your background image */
+    background-size: cover; /* Scale the image to cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background stay fixed when scrolling */
+    color: #fff; /* Adjust the text color to contrast the background */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4x4 puzzle */
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 420px; /* 4 tiles at 100px each plus gaps */
+    height: 420px;
+    position: relative;
+    background-color: #ddd;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: 400px 400px; /* Background image size */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+.puzzle-piece.correct {
+    outline: 2px solid green;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#spotify-player {
+    width: 300px;   /* Set the width of the player */
+    height: 80px;   /* Set the height of the player */
+    position: fixed; 
+    top: 20px;      /* Position the player 20px from the top of the screen */
+    right: 20px;    /* Position the player 20px from the right side of the screen */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+    z-index: 1000;  /* Make sure the player stays on top of other elements */
+}
